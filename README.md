@@ -2,7 +2,7 @@
 
 ## What can the formula do?
 
-Gunbound up and running
+Get kanidm up and running
 
 ## installation
 
