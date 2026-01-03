@@ -1,0 +1,35 @@
+#
+# crustated_identity
+#
+# Copyright (C) 2025   darix
+#
+# This program is free software: you can redistribute it and/or modify
+# it under the terms of the GNU Affero General Public License as published by
+# the Free Software Foundation, either version 3 of the License, or
+# (at your option) any later version.
+#
+# This program is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+# GNU Affero General Public License for more details.
+#
+# You should have received a copy of the GNU Affero General Public License
+# along with this program.  If not, see <http://www.gnu.org/licenses/>.
+#
+
+kanidm:
+  server:
+    ## If you need the service to run as a static user ID, e.g. if you need ACLs for certification permissions
+    ## you can set use_static_user to True.
+    ## This will create an kanidmd user/group and run the user without DynamicUser.
+    ## You should not change that after the initial setup. There is no code for a migration between the 2 modes.
+    ##
+    ## With the config block above it would use /var/lib/private/kanidm
+    ## After enabling the static user, the default paths will be changed to:
+    ## - /var/lib/kanidmd
+    ## - /var/cache/kanidmd
+    ##
+    # use_static_user: False
+    config:
+      origin: https://{{ grains.id }}
+      domain: {{ grains.id }}

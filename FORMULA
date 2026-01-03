@@ -1,0 +1,9 @@
+name: crustated-identity
+os: Suse, openSUSE
+os_family: Suse
+version: 0.0.1
+release: 1
+minimum_version: 3006
+summary: Even crustated identity needs a bit of salt
+description: kanidm
+top_level_dir: salt/kanidm
